@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="Principal2.Anagrama.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Principal2.Anagrama"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Background>
+        <ImageBrush Stretch="Fill"
+                    ImageSource="/Images/Background/FondoA.png"/>
+    </Page.Background>
+
+    <StackPanel Margin="20">
+
+        <MediaElement Source="/Sonidos/audiokawai2.wav" AutoPlay="True" Name="sonidito"/>
+
+        <Image Source="{Binding Bandera}"
+               Stretch="Uniform"
+               Opacity="0.8"
+               Height="200"
+               Width="300"
+
+               HorizontalAlignment="Center" Margin="28,5,32,15"/>
+        <ProgressBar Height="30"
+                     Width="300"
+                     Maximum="15"
+                     Value="15"
+                     Name="prgb"
+                     Foreground="OrangeRed"
+                     Opacity="0.5"/>
+        <TextBlock Name="txt_1"
+                   Foreground="OrangeRed"
+                   Text="{Binding Anagrama}"
+                   TextAlignment="Center"
+                   FontSize="35"
+                   Height="60"/>
+        <TextBox Name="txtb"
+                 Width="300"
+                 TextChanged="txtb_TextChanged"/>
+        <TextBlock FontSize="70"
+                   Text="0"
+                   Foreground="OrangeRed"
+                   TextAlignment="Center"
+                   Name="txt_puntos"/>
+        <TextBlock Text="Aciertos"
+                   HorizontalAlignment="Center"
+                   FontSize="50"
+                   Foreground="Orange"
+                   FontFamily="Segoe UI Light"/>
+
+    </StackPanel>
+</Page>

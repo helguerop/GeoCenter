@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="Principal2.Direcciones.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Principal2.Direcciones"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+
+        
+
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Images/Background/Background.png"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <TextBlock Name="txtPaisBuscado" VerticalAlignment="Center" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"/>
+        </Viewbox>
+
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <MediaElement Source="/Sonidos/audiokawai3.wav" AutoPlay="True" Name="sonidito"/>
+            <Image Grid.Column="1" Name="imgPaisBuscado" Stretch="Fill"/>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="1">
+                    <TextBlock Grid.Column="1" Name="nombrePaisBuscado" Foreground="DarkGreen" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Viewbox>
+            </Grid>
+
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <ProgressBar Grid.Column="0" Height="50" Width="240" Name="TimeProgress" Background="YellowGreen" Foreground="Aquamarine"/>
+            <TextBlock Grid.Column="1" Height="50" Width="120" FontSize="45" FontWeight="Bold" Foreground="White" TextAlignment="Center" Name="ContadorAciertos"/>
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.Column="0" Name="NorOeste" Source="/Images/Botones/NorOeste.png"/>
+                <Image Grid.Row="0" Grid.Column="1" Name="Norte" Source="/Images/Botones/Norte.png"/>
+                <Image Grid.Row="0" Grid.Column="2" Name="NorEste" Source="/Images/Botones/NorEste.png"/>
+
+                <Image Grid.Row="1" Grid.Column="0" Name="Oeste" Source="/Images/Botones/Oeste.png"/>
+                <Image Grid.Row="1" Grid.Column="2" Name="Este" Source="/Images/Botones/Este.png"/>
+
+                <Image Grid.Row="2" Grid.Column="0" Name="SurOeste" Source="/Images/Botones/SurOeste.png"/>
+                <Image Grid.Row="2" Grid.Column="1" Name="Sur" Source="/Images/Botones/Sur.png"/>
+                <Image Grid.Row="2" Grid.Column="2" Name="SurEste" Source="/Images/Botones/SurEste.png"/>
+            </Grid>
+        </Grid>
+        
+    </Grid>
+</Page>

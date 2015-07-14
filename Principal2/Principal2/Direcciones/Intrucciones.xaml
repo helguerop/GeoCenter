@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="Principal2.Direcciones.Intrucciones"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Principal2.Direcciones"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox>
+            <TextBlock Grid.Row="0" FontWeight="Bold" Text="Instrucciones" Padding="2" Foreground="GreenYellow"/>
+        </Viewbox>
+
+        <TextBlock Grid.Row="1" Foreground="White" TextWrapping="WrapWholeWords" Name="texto" Text="Determine la Posicion de un país respecto a otro mostrado en una mapa usando las flechas direccionales." FontSize="30" TextAlignment="Center"/>
+
+        <Image Grid.Row="2" Source="/Images/ImgInstrucciones/DireccionesInstrucciones.png"/>
+        
+        <Button Grid.Row="3" Content="Siguiente" VerticalAlignment="Center" HorizontalAlignment="Center" Name="Siguiente"/>
+    </Grid>
+</Page>

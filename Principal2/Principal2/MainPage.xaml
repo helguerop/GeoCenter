@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="Principal2.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Principal2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    
+    <Grid>
+        <!--<Button Content="Anagramas" Click="btn_Anagramas"/>
+        <Button Content="Direcciones" Click="btn_Direcciones"/>
+        <Button Content="Puntuaciones" Click="Puntuaciones"/>-->
+
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/Images/Background/Fondo Principal.png"/>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <MediaElement Source="/Sonidos/audiokawaip.wav" AutoPlay="True" Name="sonidito"/>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Rectangle Grid.Column="0" Name="GeoQuiz" Fill="Transparent"/>
+            <Rectangle Grid.Column="1" Name="DondeEstaMiVecino" Fill="Transparent"/>
+            <Rectangle Grid.Column="2" Name="GeoGramas" Fill="Transparent"/>
+            <Rectangle Grid.Column="3" Name="SoyElMayor" Fill="Transparent"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Rectangle Grid.Column="0" Name="Punuaciones" Fill="Transparent"/>
+        </Grid>
+    </Grid>
+</Page>
